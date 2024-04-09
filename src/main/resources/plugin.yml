@@ -1,0 +1,14 @@
+name: K1Variable
+version: '${version}'
+main: org.atk1true.k1variable.K1Variable
+load: STARTUP
+commands:
+  kv:
+    #描述这个命令
+    description: My first command for customizing variables.
+    #用法
+    usage: /kv <参数> <变量名> <初始数值>
+    #执行此命令的人所需的权限
+    permission: kv.all
+    #没有权限的提示消息
+    permission-message: 你不能执行它.
