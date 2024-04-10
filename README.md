@@ -3,7 +3,9 @@
 gradle--
 #### how to gradle this plugin
 > 1.open CMD
+>
 > 2.type : ./gradle clean build or ./gradle build
+> 
 > 3.then waitting for the build completed.
 this plugin and then put it into your server's plugin folder.
 #### Second
