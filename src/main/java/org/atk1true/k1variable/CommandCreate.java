@@ -21,9 +21,6 @@ public class CommandCreate implements CommandExecutor {
         else if(command.equals("testUse")){
             sender.sendMessage("testUse命令执行成功");
         }
-        else if(sender.isOp()){
-            sender.sendMessage("usage:/kv <参数> <变量名> <初始数值>");
-        }
         return false;
     }
 }
