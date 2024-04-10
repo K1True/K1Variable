@@ -3,6 +3,7 @@ package org.atk1true.k1variable;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -13,10 +14,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class TestUsage extends JavaPlugin {
+public class TestUsage implements CommandExecutor {
+    /**
+     * CommandSender sender 就是命令使用者
+     * Command command 命令 命令名称要注意.getname()调用
+     * String label label意思是指令的别名
+     * String[] args args意思是指令后面的参数
+     * */
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (label.equals("testUse")){
+        if (command.getName().equalsIgnoreCase("testuse")){
             Player p = (Player)sender;
             if(!(p instanceof Player)){
                 sender.sendMessage("只能在游戏中使用");
@@ -32,8 +39,8 @@ public class TestUsage extends JavaPlugin {
             //设置物品Lore
             itemMeta.setLore(Arrays.asList("a function"));
             itemStack.setItemMeta(itemMeta);
-            inventory.addItem(itemStack);
-            inventory.setItem(9,itemStack);
+            //inventory.addItem(itemStack);
+            inventory.setItem(9,itemStack);//第10个槽位添加指南针
             p.openInventory(inventory);
             return true;
         }

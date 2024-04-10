@@ -7,8 +7,17 @@ commands:
     #描述这个命令
     description: My first command for customizing variables.
     #用法
-    usage: /kv <参数> <变量名> <初始数值>
+    usage: /<command> <参数> <变量名> <初始数值>
     #执行此命令的人所需的权限
     permission: kv.all
     #没有权限的提示消息
     permission-message: 你不能执行它.
+  testuse:
+    description: 呃呃
+    usage: /<command>
+    permission-message: 堂吉诃德，你不是OP，所以你不能使用这个指令。
+  test:
+    description: test
+    usage: /<command>
+    permission: k1.test.two
+    permission-message: 堂吉诃德，你不是OP，所以你不能使用这个指令。

@@ -15,7 +15,7 @@ public class InventoryClickListener implements Listener {
         //先获取被点击的容器
         Inventory inventory = e.getClickedInventory();
         //再判断，被点击的槽位是否是序号9的槽位
-        if(e.getRawSlot()==9){
+        if(e.getRawSlot()==9 && inventory.getTitle().equals("测试Container")){
             //如果是，则获取点击该槽位的玩家
             Player p = (Player)e.getWhoClicked();
             //并使玩家执行指令/spawn
