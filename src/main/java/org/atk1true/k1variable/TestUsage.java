@@ -39,4 +39,8 @@ public class TestUsage extends JavaPlugin {
         }
         return false;
     }
+    /**
+     * 但是你会发现我们可以从这个容器里取出指南针，然后再次输入/testUse继续从容器里刷指南针，该怎么办呢？
+     * 这个时候需要用到监听事件：Listener  （此处请看org.atk1true.k1variable.InventoryClickListener类)
+     * */
 }
